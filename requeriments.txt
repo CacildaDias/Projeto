@@ -1,0 +1,4 @@
+Streamlit
+pandas
+plotly
+openpyxl #extensão quando for usar arquivo .xlsx
