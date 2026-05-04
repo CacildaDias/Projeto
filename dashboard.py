@@ -59,9 +59,9 @@ def main():
     col1, col2 = st.columns(2)
     col3, col4 = st.columns(2)
     col1.plotly_chart(gf_lucro_segmento,use_container_width=True)
-    col2.plotly_chart(gf_vendas_vendas,use_container_width=True)
+    col2.plotly_chart(gf_vendas_tempo,use_container_width=True)
     col3.plotly_chart(gf_produtos_vendidos,use_container_width=True)
-    col4.plotly_chart(gf_custo_lucro,use_container_width=True)
+    col4.plotly_chart(gf_custo,use_container_width=True)
 
 main()    
 
