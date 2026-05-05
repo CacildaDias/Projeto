@@ -47,7 +47,7 @@ def main():
        custo_lucro_data,
        x='Segmento', y= 'value',
        title='Relação Entre Custo e Lucro',
-       color='Relação Entre Custo e Lucro',
+       color='variable',
        barmode='group',
        text_auto=True)
 
