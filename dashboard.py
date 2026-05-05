@@ -41,7 +41,7 @@ def main():
         data_filtrada.groupby('Produto')['Unidades Vendidas'].sum().reset_index(),
         values='Unidades Vendidas', names='Produto',
         title='Distribuição de Produtos Vendidos'
-     )
+    )
     
     custo_lucro_data = data_filtrada.groupby(['Segmento'])[['COGS', 'Lucro']].sum().reset_index().melt(
         id_vars ='Segmento', value_vars = ['COGS', 'Lucro'])
