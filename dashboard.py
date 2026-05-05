@@ -20,7 +20,7 @@ def main():
     if filtro_pais != "todos":
         data_filtrada = data_filtrada[data_filtrada['País']== filtro_pais]
 
-    gf_lucro_segmento = px.br(
+    gf_lucro_segmento = px.bar(
         data_filtrada.groupby('Segmento')['Lucro'].sum().reset_index(),
         x='Segmento', y='Lucro',
         title='Lucro Por Segmento',
@@ -43,7 +43,7 @@ def main():
         title='Distribuição de Produtos Vendidos'
      )
     
-    custo_lucro_data = data_filtrada(['Segmento'])[['COGS', 'Lucro']].sum().reset_index().melt(
+    custo_lucro_data = data_filtrada.groupby(['Segmento'])[['COGS', 'Lucro']].sum().reset_index().melt(
         id_vars ='Segmento', value_vars = ['COGS', 'Lucro'])
     custo_lucro_data['value_formatado'] = custo_lucro_data ['value'].apply(lambda x: f'R$ {x:.2}')
 
